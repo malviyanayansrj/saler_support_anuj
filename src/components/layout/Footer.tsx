@@ -6,7 +6,7 @@ export default function Footer() {
   const mapSearchUrl = "https://www.google.com/maps/search/?api=1&query=Adhartal+Tiraha,+Jabalpur,+Madhya+Pradesh+482004";
 
   return (
-    <footer className="bg-dark-gray text-white pt-12 pb-10 border-t border-dark-border">
+    <footer className="bg-dark-gray text-white pt-12 pb-10 border-t border-dark-border font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-dark-border items-start">
@@ -27,17 +27,17 @@ export default function Footer() {
                   Saler<span className="text-tiffany group-hover:drop-shadow-[0_0_10px_rgba(33,241,168,0.8)] transition-all">Support</span>
                 </span>
                 <span className="h-0.5 w-full bg-tiffany scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-center rounded-full" />
-                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider transition-colors group-hover:text-white">
+                <span className="font-sans text-[10px] uppercase font-bold text-slate-400 tracking-wider transition-colors group-hover:text-white">
                   Marketplace Growth Agency
                 </span>
               </div>
             </Link>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+            <p className="font-sans text-slate-400 text-sm leading-relaxed max-w-sm font-medium">
               Dedicated seller account management for Amazon, Flipkart, Meesho, JioMart & Blinkit.
             </p>
 
-            <ul className="space-y-2.5 text-sm text-slate-300 pt-1">
+            <ul className="space-y-2.5 font-sans text-sm text-slate-300 font-medium pt-1">
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-tiffany shrink-0" />
                 <span>Adhartal Tiraaha, Jabalpur, MP 482004</span>
@@ -59,12 +59,12 @@ export default function Footer() {
 
           {/* Col 2: Navigation Links */}
           <div className="md:col-span-3 space-y-3 pt-2">
-            <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-tiffany">Navigation</h4>
-            <ul className="space-y-2 text-sm text-slate-300">
+            <h4 className="font-heading text-xs font-extrabold uppercase tracking-widest text-tiffany">
+              Navigation
+            </h4>
+            <ul className="space-y-2 font-sans text-sm text-slate-300 font-medium">
               <li><Link href="/#hero" className="hover:text-tiffany transition-colors">Home</Link></li>
-              <li><Link href="/#services" className="hover:text-tiffany transition-colors">Core Services</Link></li>
-              <li><Link href="/#why-us" className="hover:text-tiffany transition-colors">Why Choose Us</Link></li>
-              <li><Link href="/#how-it-works" className="hover:text-tiffany transition-colors">How It Works</Link></li>
+              <li><Link href="/services" className="hover:text-tiffany transition-colors">Core Services</Link></li>
               <li><Link href="/#faq" className="hover:text-tiffany transition-colors">Seller FAQ</Link></li>
               <li><Link href="/contact" className="hover:text-tiffany transition-colors font-bold text-tiffany">Get a Free Quote</Link></li>
             </ul>
@@ -73,21 +73,20 @@ export default function Footer() {
           {/* Col 3: Interactive Adhartal Tiraaha Map */}
           <div className="md:col-span-5 space-y-3 pt-2">
             <div className="flex items-center justify-between">
-              <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-tiffany">
+              <h4 className="font-heading text-xs font-extrabold uppercase tracking-widest text-tiffany">
                 Agency Headquarter Location
               </h4>
               <a
                 href={mapSearchUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-bold text-tiffany hover:underline flex items-center gap-1"
+                className="font-heading text-xs font-bold text-tiffany hover:underline flex items-center gap-1"
               >
                 <span>Adhartal Tiraaha, Jabalpur ↗</span>
               </a>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden border border-dark-border h-64 sm:h-72 w-full">
-              {/* Interactive Embedded Google Map (Slide, Drag & Pan Enabled) */}
               <iframe
                 title="Saler Support Adhartal Tiraha Jabalpur Location Map"
                 src="https://maps.google.com/maps?q=Adhartal%20Tiraha%2C%20Jabalpur%2C%20Madhya%20Pradesh%20482004&t=&z=17&ie=UTF8&iwloc=B&output=embed"
@@ -102,11 +101,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 font-sans text-xs text-slate-400 font-medium">
           <p>© {new Date().getFullYear()} Saler Support. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-slate-400 transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
